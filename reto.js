@@ -8,18 +8,17 @@ const btnE5 = document.getElementById("btnE5");
 const btnF6 = document.getElementById("btnF6");
 const btnG7 = document.getElementById("btnG7");
 const btnH8 = document.getElementById("btnH8");
-const btnI9 = document.getElementById("btnJ9");
+const btnI9 = document.getElementById("btnI9");
 const btnJ0 = document.getElementById("btnJ0");
-const btnClearLetter = document.getElementById("btnClearLetter");
-const btnClearNumber = document.getElementById("btnClearNumber");
-console.log();
+const btnclearLetter = document.getElementById("btnclearLetter");
+const btnclearNumber = document.getElementById("btnclearNumber");
 
 const fnA1 = () => {
   if (letter.innerHTML == "") {
     letter.innerHTML = "A";
   } else {
-    if (letter.innerhtml == "ABCDEFGHIJ" && number.innerhtml == "") {
-      number.innerhtml = 1;
+    if (letter.innerHTML == "ABCDEFGHIJ" && number .innerHTML == "") {
+      number.innerHTML = 1;
     }
   }
 };
@@ -96,11 +95,11 @@ const fnE5 = () => {
   }
 };
 
-const fnF6 = () => {
+const fnF6= () => {
   if (letter.innerHTML == "ABCDE") {
     letter.innerHTML += "F";
   } else {
-    if (letter.innerHTML == "" || letter.innerHTML.length < 5) {
+    if (letter.innerHTML == "" || letter.innerHTML.length < 5 ) {
       alert("Faltan letras");
     } else {
       if (letter.innerHTML == "ABCDEFGHIJ" && number.innerHTML == "12345") {
@@ -168,6 +167,24 @@ const fnI9 = () => {
   }
 };
 
+const fnJ0 = () => {
+  if (letter.innerHTML == "ABCDEFGHI") {
+    letter.innerHTML += "J";
+  } else {
+    if (letter.innerHTML == "" || letter.innerHTML.length < 9) {
+      alert("Faltan letras");
+    } else {
+      if (letter.innerHTML == "ABCDEFGHIJ" && number.innerHTML == "123456789") {
+        number.innerHTML += "0";
+      } else {
+        if (letter.innerHTML == "ABCDEFGJIJ" && number.innerHTML.length < 9) {
+          alert("Faltan numeros");
+        }
+      }
+    }
+  }
+};
+
 const fnClearLetter = () => {
 letter.innerHTML = "";
 };
@@ -192,22 +209,27 @@ btnD4.onclick = function(){
     fnD4();
 };
 
-btnE5.onclick =function(){
+btnE5.onclick = function(){
     fnE5();
 };
 
 btnF6.onclick = function(){
-    fnF6
-}
+  fnF6();
+};
 
 btnG7.onclick = function(){
-    fnG7
-}
+  fnG7();
+};
 
 btnH8.onclick = function(){
-    fnH8
-}
+  fnH8();
+};
+
 
 btnI9.onclick = function(){
-    fnI9
-}
+  fnI9();
+};
+
+btnJ0.onclick = function(){
+  fnJ0();
+};
